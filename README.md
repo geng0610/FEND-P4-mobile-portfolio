@@ -71,3 +71,24 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+=============================
+REFERENCES
+- Mozilla Developer Network
+- Google PageSpeed Tools
+
+
+List of optimization in index.html
+- Moved render-blocking CSS and Javascript below body.
+- Resized images in images directory and losslessly compressed profile pics
+- Added height and width to images
+- Using Javascript to add in CSS on load
+- Commented out previous edits but keeping the edits, since HTML loading is not bottleneck and comments are helpful.
+
+List of optimization for pizza.html
+- line 452 and on. Moved variable declarations outside for-loop for reduced calculation. Reduce resizing to less than 5ms.
+- line 477 and on. Made into its own function and call in EventListener along side other functions to reduce redundant HTML parse.
+- Line 523. Moved variable declaration outside for-loop.
+- line 538 and on. Made addPizzas into its own function. Using createDocumentFragments to create HTML in memory and append once.
+- Line 558 and on. Made addMovingPizzas into its own function. Using create DocumentFragments to create HTML in memory and append once.
+- Line 563. No need for 25 rows of pizza. 6 rows is more than enough.
